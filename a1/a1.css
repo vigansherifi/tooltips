@@ -1,0 +1,59 @@
+body{
+  padding: 30px;
+}
+
+.tooltip {
+  position: relative;
+  border-bottom: 1px dashed #000;
+}
+.tooltip:before {
+  content: attr(data-text);
+  position: absolute;
+
+  /* Pozicionimi vertikal */
+  top: 50%;
+  transform: translateY(-50%);
+
+  /* levizja djathtas */
+  left: 100%;
+  margin-left: 15px;
+
+  /* stilizimi bazik */
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  background: black;
+  color: white;
+  text-align: center;
+
+  /* Zhduku */
+
+  display: none;
+}
+
+
+.tooltip:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top:26px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid blue;
+}
+
+
+.tooltip:hover::before{
+  display: inline;
+}
+
+a{
+  text-decoration: none;
+}
+
+.active{
+  background-color: blue;
+  color: white;
+}
+ 
